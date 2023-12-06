@@ -165,11 +165,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kao:
-  - {fileID: 7393876487178402604, guid: 46fa1fc9dae37fe4eae2a8b9b22994f0, type: 3}
-  - {fileID: 3597999955014610861, guid: cf0e8bac065c52a4d8fb5bc5a6a2b36f, type: 3}
-  - {fileID: 748599567037786118, guid: ebf90f197ceb31845adfef5305e1afed, type: 3}
-  - {fileID: 5212530134143173226, guid: f2d5f8efc7c970c44adae5f78386385b, type: 3}
-  - {fileID: 5694147958276647975, guid: e81d54880c2653b46a590e5418810ea2, type: 3}
+  - {fileID: 3721029232662834282, guid: 84801f358b5b53f4e8c7fd03d9a4e9ce, type: 3}
+  - {fileID: 5807545941932640006, guid: 6c1e9c4f9a23ced4b819a534a7af9f9a, type: 3}
+  - {fileID: 9204056890408124948, guid: f3f1558d6cb7b2d4c9df341b3bcef8da, type: 3}
+  - {fileID: 5448623233392402959, guid: 14a63af64c4580745812c581bd7ca1bf, type: 3}
+  - {fileID: 8402960046748577926, guid: 6bc1034776ff511438720c2f81eb2fda, type: 3}
   ok: 1
   fruok: 0
   sui: {fileID: 0}
@@ -495,7 +495,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 163.29999, y: 21.900024}
+  m_AnchoredPosition: {x: 163, y: 22}
   m_SizeDelta: {x: 309.9828, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &213501503
