@@ -9,8 +9,8 @@ public class tempura : MonoBehaviour
     public GameObject mu;
     public float taka;
     public float off;
-    private float max;
-    private float min;
+    public static float max2;
+    public static float min2;
 
     // Start is called before the first frame update
     void Start()
@@ -29,32 +29,32 @@ public class tempura : MonoBehaviour
             mou = Input.mousePosition;
             tar = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             this.transform.position = new Vector2(tar.x + off, taka);
-            this.transform.position = new Vector2(Mathf.Clamp(tar.x, min, max) + off, taka);
+            this.transform.position = new Vector2(Mathf.Clamp(tar.x, min2, max2) + off, taka);
 
             if (nexxt.nex == 0)
             {
-                min = -18.3f;
-                max = 22.7f;
+                min2 = -18.3f;
+                max2 = 22.5f;
             }
             if (nexxt.nex == 1)
             {
-                min = -17.9f;
-                max = 22.1f;
+                min2 = -17.9f;
+                max2 = 22.1f;
             }
             if (nexxt.nex == 2)
             {
-                min = -17.8f;
-                max = 21.8f;
+                min2 = -17.8f;
+                max2 = 21.8f;
             }
             if (nexxt.nex == 3)
             {
-                min = -16.4f;
-                max = 21f;
+                min2 = -16.4f;
+                max2 = 21f;
             }
             if (nexxt.nex == 4)
             {
-                min = -15.3f;
-                max = 19.3f;
+                min2 = -15.3f;
+                max2 = 19.3f;
             }
         }
        

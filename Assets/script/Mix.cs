@@ -40,6 +40,7 @@ public class Mix : MonoBehaviour
         {
             if(fe == null)
             {
+                
                 Destroy(gameObject);
 
             }

@@ -40,6 +40,31 @@ public class Spown : MonoBehaviour
                     Nexxt nexxt;
                     nexxt = t2i.GetComponent<Nexxt>();
                     int fff = nexxt.nex;
+                    if (nexxt.nex == 0)
+                    {
+                        tempura.min2 = -18.3f;
+                        tempura.max2 = 22.5f;
+                    }
+                    if (nexxt.nex == 1)
+                    {
+                        tempura.min2 = -17.9f;
+                        tempura.max2 = 22.1f;
+                    }
+                    if (nexxt.nex == 2)
+                    {
+                        tempura.min2 = -17.8f;
+                        tempura.max2 = 21.8f;
+                    }
+                    if (nexxt.nex == 3)
+                    {
+                        tempura.min2 = -16.4f;
+                        tempura.max2 = 21f;
+                    }
+                    if (nexxt.nex == 4)
+                    {
+                        tempura.min2 = -15.3f;
+                        tempura.max2 = 19.3f;
+                    }
                     // Debug.Log(fff);
                     Cre(fff);
                 }
