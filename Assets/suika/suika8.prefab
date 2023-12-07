@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 5090849309141015510}
   - component: {fileID: 8244887202011341609}
   - component: {fileID: 7925624980959131055}
-  - component: {fileID: 183006413241550223}
-  - component: {fileID: 8851185080575295895}
   - component: {fileID: 4318555244776894482}
   - component: {fileID: -3814725782766901711}
   - component: {fileID: -5547923632121622219}
@@ -75,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 148059766325cce4da2f8868681483e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -100,41 +98,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.23411036, y: -0.63545066}
+  m_Offset: {x: -0.23411036, y: -0.6354499}
   serializedVersion: 2
-  m_Radius: 3.6484296
---- !u!70 &183006413241550223
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748599567037786118}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1.7725698, y: 2.541799}
-  m_Size: {x: 2.5477154, y: 5.1564026}
-  m_Direction: 0
---- !u!70 &8851185080575295895
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748599567037786118}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 2.9765875, y: 1.4046772}
-  m_Size: {x: 1.7450268, y: 3.0159378}
-  m_Direction: 0
+  m_Radius: 3.980311
 --- !u!50 &4318555244776894482
 Rigidbody2D:
   serializedVersion: 4
