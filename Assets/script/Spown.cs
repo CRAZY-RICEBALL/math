@@ -31,7 +31,7 @@ public class Spown : MonoBehaviour
     {
         if (Time.timeScale != 0)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space)| Input.GetMouseButton(0))
             {
                 if (ok == true)
                 {
