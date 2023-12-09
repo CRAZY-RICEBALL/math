@@ -22,6 +22,7 @@ public class gameover : MonoBehaviour
 
     public static void over()
     {
+
         //gameObject.GetComponent<Image>().color = color;
         anim.SetTrigger("OVER");
     }

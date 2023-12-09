@@ -13,7 +13,7 @@ public class gamewe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         if (gameObject.transform.position.y >= 28)
         {
             Debug.Log("ゲームオーバー");

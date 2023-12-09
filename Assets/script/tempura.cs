@@ -48,7 +48,7 @@ public class tempura : MonoBehaviour
             }
             if (nexxt.nex == 3)
             {
-                min2 = -16.4f;
+                min2 = -16.2f;
                 max2 = 21f;
             }
             if (nexxt.nex == 4)

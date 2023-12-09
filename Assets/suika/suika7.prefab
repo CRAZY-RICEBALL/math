@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5212530134143173226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.501709, y: 0.07979089, z: 0}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
+  m_LocalScale: {x: 1.6, y: 1.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!58 &6543571584336909577
 CircleCollider2D:
@@ -164,5 +164,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fe: {fileID: 748599567037786118, guid: ebf90f197ceb31845adfef5305e1afed, type: 3}
+  effct: {fileID: 8482351681322185836, guid: ff35ac2f45b1e694ba3dc8fa34d6a595, type: 3}
   maji: 0
   ookisa: 0

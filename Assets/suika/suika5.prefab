@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8402960046748577926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.19, y: 0.57, z: 0}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
+  m_LocalScale: {x: 1.15, y: 1.15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!50 &307127225368162627
 Rigidbody2D:
@@ -147,5 +147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fe: {fileID: 5694147958276647975, guid: e81d54880c2653b46a590e5418810ea2, type: 3}
+  effct: {fileID: 8482351681322185836, guid: ff35ac2f45b1e694ba3dc8fa34d6a595, type: 3}
   maji: 0
   ookisa: 0

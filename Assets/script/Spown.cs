@@ -57,7 +57,7 @@ public class Spown : MonoBehaviour
                     }
                     if (nexxt.nex == 3)
                     {
-                        tempura.min2 = -16.4f;
+                        tempura.min2 = -16.2f;
                         tempura.max2 = 21f;
                     }
                     if (nexxt.nex == 4)

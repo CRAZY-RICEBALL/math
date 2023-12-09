@@ -7,6 +7,7 @@ public class Mix : MonoBehaviour
 {
    
     public GameObject fe;
+    public GameObject effct;
     public bool maji;
     Spown spown;
     public int ookisa;
@@ -64,13 +65,17 @@ public class Mix : MonoBehaviour
                         fe = null;
                         spown.number++;
                         sui.name = spown.number.ToString();
-                        
+                        GameObject oni = Instantiate(effct, cho, Quaternion.identity);
+
                         Debug.Log("よっしゃーーーーーーー" + this.gameObject.name);
+                       
                         Destroy(gameObject);
+                      
                     }
                 }
                 else
                 {
+                   
                     Debug.Log("まけたーー" + this.gameObject.name);
                     Destroy(gameObject);
                 }
