@@ -11,6 +11,8 @@ public class tempura : MonoBehaviour
     public float off;
     public static float max2;
     public static float min2;
+    public bool mode;
+    public float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -27,10 +29,26 @@ public class tempura : MonoBehaviour
             Nexxt nexxt;
             nexxt = mu.GetComponent<Nexxt>();
             mou = Input.mousePosition;
-            tar = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            this.transform.position = new Vector2(tar.x + off, taka);
-            this.transform.position = new Vector2(Mathf.Clamp(tar.x, min2, max2) + off, taka);
-
+            if(mode == true)
+            {
+                tar = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                this.transform.position = new Vector2(tar.x + off, taka);
+                this.transform.position = new Vector2(Mathf.Clamp(tar.x, min2, max2) + off, taka);
+            }
+            else
+            { 
+                
+                if (Input.GetKey(KeyCode.L))
+                {
+                    tar.x += speed;
+                }else
+                if (Input.GetKey(KeyCode.A))
+                {
+                    tar.x -= speed;
+                }
+                this.transform.position = new Vector2(Mathf.Clamp(tar.x, min2, max2) + off, taka);
+            }
+          
             if (nexxt.nex == 0)
             {
                 min2 = -18.3f;

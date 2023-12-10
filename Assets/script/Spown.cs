@@ -11,8 +11,11 @@ public class Spown : MonoBehaviour
     public static bool gamew;
     public GameObject sui;
     public GameObject t2i;
+    public GameObject t3i;
     public GameObject sen;
     public int number;
+    public AudioClip pon;
+    AudioSource audioSource;
 
 
     // Start is called before the first frame update
@@ -31,45 +34,54 @@ public class Spown : MonoBehaviour
     {
         if (Time.timeScale != 0)
         {
-            if (Input.GetKeyDown(KeyCode.Space)| Input.GetMouseButton(0))
+            if(ruret.ivent == false)
             {
-                if (ok == true)
+                if (Input.GetKeyDown(KeyCode.Space)| Input.GetKeyDown(KeyCode.W) | Input.GetKeyDown(KeyCode.O))
                 {
                     
-                    fruok = true;
-                    Nexxt nexxt;
-                    nexxt = t2i.GetComponent<Nexxt>();
-                    int fff = nexxt.nex;
-                    if (nexxt.nex == 0)
+                        Debug.Log("oooooooooooooooooooooooooooooooooooooooooooo");
+                    if (ok == true)
                     {
-                        tempura.min2 = -18.3f;
-                        tempura.max2 = 22.5f;
-                    }
-                    if (nexxt.nex == 1)
-                    {
-                        tempura.min2 = -17.9f;
-                        tempura.max2 = 22.1f;
-                    }
-                    if (nexxt.nex == 2)
-                    {
-                        tempura.min2 = -17.8f;
-                        tempura.max2 = 21.8f;
-                    }
-                    if (nexxt.nex == 3)
-                    {
-                        tempura.min2 = -16.2f;
-                        tempura.max2 = 21f;
-                    }
-                    if (nexxt.nex == 4)
-                    {
-                        tempura.min2 = -15.3f;
-                        tempura.max2 = 19.3f;
-                    }
-                    // Debug.Log(fff);
-                    Cre(fff);
-                }
 
+                        fruok = true;
+                        Nexxt nexxt;
+                        nexxt = t2i.GetComponent<Nexxt>();
+                        int fff = nexxt.nex;
+                        if (nexxt.nex == 0)
+                        {
+                            tempura.min2 = -18.3f;
+                            tempura.max2 = 22.5f;
+                        }
+                        if (nexxt.nex == 1)
+                        {
+                            tempura.min2 = -17.9f;
+                            tempura.max2 = 22.1f;
+                        }
+                        if (nexxt.nex == 2)
+                        {
+                            tempura.min2 = -17.8f;
+                            tempura.max2 = 21.8f;
+                        }
+                        if (nexxt.nex == 3)
+                        {
+                            tempura.min2 = -16.2f;
+                            tempura.max2 = 21f;
+                        }
+                        if (nexxt.nex == 4)
+                        {
+                            tempura.min2 = -15.3f;
+                            tempura.max2 = 19.3f;
+                        }
+                        // Debug.Log(fff);
+                        Cre(fff);
+                        audioSource = GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(pon);
+                    }
+
+                }
             }
+         
+           
         }
             
 
@@ -83,6 +95,8 @@ public class Spown : MonoBehaviour
 
     public void Cre(int k)
     {
+        if (ruret.ivent == false)
+        {
             ok = false;
             sen.gameObject.SetActive(false);
             Nexxt nexxt;
@@ -90,7 +104,7 @@ public class Spown : MonoBehaviour
             number++;
             GameObject sui = Instantiate(kao[k], transform.position, Quaternion.identity);
             sui.name = number.ToString();
-        //sui.transform.parent = this.transform;
+            //sui.transform.parent = this.transform;
             var rb = sui.GetComponent<Rigidbody2D>();
             //rb.bodyType = RigidbodyType2D.Kinematic;
             rb.bodyType = RigidbodyType2D.Dynamic;
@@ -98,11 +112,11 @@ public class Spown : MonoBehaviour
 
             GameObject cd = transform.GetChild(0).gameObject;
             Destroy(cd);
-        //Invoke("no", 0f);
-        
-        //Debug.Log(nexxt.nex);
+            //Invoke("no", 0f);
 
-            
+            //Debug.Log(nexxt.nex);
+
+        }     
 
        
     }
@@ -153,6 +167,59 @@ public class Spown : MonoBehaviour
             //Debug.Log("死ぬかと思った...");
         }
 
+    }
+
+    public void oky()
+    {
+        if (Time.timeScale != 0)
+        {
+            if (ruret.ivent == false)
+            {
+               
+                    Debug.Log("oooooooooooooooooooooooooooooooooooooooooooo");
+                    if (ok == true)
+                    {
+
+                        fruok = true;
+                        Nexxt nexxt;
+                        nexxt = t2i.GetComponent<Nexxt>();
+                        int fff = nexxt.nex;
+                        if (nexxt.nex == 0)
+                        {
+                            tempura.min2 = -18.3f;
+                            tempura.max2 = 22.5f;
+                        }
+                        if (nexxt.nex == 1)
+                        {
+                            tempura.min2 = -17.9f;
+                            tempura.max2 = 22.1f;
+                        }
+                        if (nexxt.nex == 2)
+                        {
+                            tempura.min2 = -17.8f;
+                            tempura.max2 = 21.8f;
+                        }
+                        if (nexxt.nex == 3)
+                        {
+                            tempura.min2 = -16.2f;
+                            tempura.max2 = 21f;
+                        }
+                        if (nexxt.nex == 4)
+                        {
+                            tempura.min2 = -15.3f;
+                            tempura.max2 = 19.3f;
+                        }
+                        // Debug.Log(fff);
+                        Cre(fff);
+                        audioSource = GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(pon);
+                    }
+
+               
+            }
+
+
+        }
     }
 
     

@@ -11,7 +11,10 @@ public class Mix : MonoBehaviour
     public bool maji;
     Spown spown;
     public int ookisa;
-   // public int ookisa;
+    public AudioClip kiran;
+    AudioSource audioSource;
+
+    // public int ookisa;
 
     // Start is called before the first frame update
     void Start()
@@ -66,7 +69,8 @@ public class Mix : MonoBehaviour
                         spown.number++;
                         sui.name = spown.number.ToString();
                         GameObject oni = Instantiate(effct, cho, Quaternion.identity);
-
+                        audioSource = sui.GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(kiran);
                         Debug.Log("よっしゃーーーーーーー" + this.gameObject.name);
                        
                         Destroy(gameObject);
