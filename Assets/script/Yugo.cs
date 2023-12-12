@@ -19,15 +19,19 @@ public class Yugo : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-       
-        Spown spown;
-        spown = GameObject.Find("frhi").GetComponent<Spown>();
-        gameObject.AddComponent<gamewe>();
-        spown.no();
-        
+        if (collision.gameObject.tag != "Cabe")
+        {
+            Spown spown;
+            spown = GameObject.Find("frhi").GetComponent<Spown>();
+            gameObject.AddComponent<gamewe>();
+            spown.no();
+
             Destroy(this.gameObject.transform.GetComponent<Yugo>());
-           // Debug.Log("214212");
-      
+            // Debug.Log("214212");
+        }
+
+
+
 
     }
 }
