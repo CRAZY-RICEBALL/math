@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using NCMB;
 
 public class gameover : MonoBehaviour
 {
     public static Animator anim;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +24,9 @@ public class gameover : MonoBehaviour
 
     public static void over()
     {
-
         //gameObject.GetComponent<Image>().color = color;
         anim.SetTrigger("OVER");
     }
+
+
 }
