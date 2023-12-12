@@ -24,12 +24,7 @@ public class Yugo : MonoBehaviour
         spown = GameObject.Find("frhi").GetComponent<Spown>();
         gameObject.AddComponent<gamewe>();
         spown.no();
-        if(gameObject.transform.position.y >= 28)
-        {
-            Debug.Log("ゲームオーバー");
-            Time.timeScale = 0;
-            gameover.over();
-        }
+        
             Destroy(this.gameObject.transform.GetComponent<Yugo>());
            // Debug.Log("214212");
       
