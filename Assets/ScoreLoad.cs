@@ -9,6 +9,9 @@ public class ScoreLoad : MonoBehaviour
     public Text ScoreeText1;
     public Text ScoreeText2;
     public Text ScoreeText3;
+    public Text ScoreeText11;
+    public Text ScoreeText22;
+    public Text ScoreeText33;
     public string s1;
     public string s2;
     public string s3;
@@ -16,21 +19,16 @@ public class ScoreLoad : MonoBehaviour
     void Start()
     {
         sce = true;
+        LoadScore();
     }
 
     void Update()
     {
-        if (Time.timeScale == 0)
-        {
-            LoadScore();
-        }
-
+       
     }
     public void LoadScore()
     {
-        if (sce == true)
-        {
-            sce = false;
+       
             int rank;
             NCMBQuery<NCMBObject> query = new NCMBQuery<NCMBObject>("ScoreClass");
             query.OrderByDescending("score");
@@ -53,8 +51,11 @@ public class ScoreLoad : MonoBehaviour
                     ScoreeText1.text = $"1位：{objList[0]["score"]}";
                     ScoreeText2.text = $"2位：{ objList[1]["score"]}";
                     ScoreeText3.text = $"3位：{ objList[2]["score"]}";
+                    ScoreeText11.text = $"1位：{objList[0]["score"]}";
+                    ScoreeText22.text = $"2位：{ objList[1]["score"]}";
+                    ScoreeText33.text = $"3位：{ objList[2]["score"]}";
                 }
             });
-        }
+        
     }
 }
