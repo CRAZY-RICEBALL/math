@@ -29,7 +29,11 @@ public class tempura : MonoBehaviour
             Nexxt nexxt;
             nexxt = mu.GetComponent<Nexxt>();
             mou = Input.mousePosition;
-            if(mode == true)
+            if (Input.GetKeyDown(KeyCode.LeftShift) | Input.GetKeyDown(KeyCode.RightShift))
+            {
+                mode = !mode;
+            }
+            if (mode == true)
             {
                 tar = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 this.transform.position = new Vector2(tar.x + off, taka);
@@ -38,14 +42,15 @@ public class tempura : MonoBehaviour
             else
             { 
                 
-                if (Input.GetKey(KeyCode.L))
+                if (Input.GetKey(KeyCode.RightArrow))
                 {
                     tar.x += speed;
                 }else
-                if (Input.GetKey(KeyCode.A))
+                if (Input.GetKey(KeyCode.LeftArrow))
                 {
                     tar.x -= speed;
                 }
+       
                 this.transform.position = new Vector2(Mathf.Clamp(tar.x, min2, max2) + off, taka);
             }
           

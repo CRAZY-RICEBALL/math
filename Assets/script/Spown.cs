@@ -15,6 +15,8 @@ public class Spown : MonoBehaviour
     public GameObject sen;
     public int number;
     public AudioClip pon;
+    public GameObject knifes;
+    public static bool knifetime;
     AudioSource audioSource;
 
 
@@ -34,50 +36,53 @@ public class Spown : MonoBehaviour
     {
         if (Time.timeScale != 0)
         {
-            if(ruret.ivent == false)
+            if (knifetime == false)
             {
-                if (Input.GetKeyDown(KeyCode.Space)| Input.GetKeyDown(KeyCode.W) | Input.GetKeyDown(KeyCode.O))
+                if (ruret.ivent == false)
                 {
-                    
-                        Debug.Log("oooooooooooooooooooooooooooooooooooooooooooo");
-                    if (ok == true)
+                    if (Input.GetKeyDown(KeyCode.Space) | Input.GetKeyDown(KeyCode.W) | Input.GetKeyDown(KeyCode.O))
                     {
 
-                        fruok = true;
-                        Nexxt nexxt;
-                        nexxt = t2i.GetComponent<Nexxt>();
-                        int fff = nexxt.nex;
-                        if (nexxt.nex == 0)
+                        Debug.Log("oooooooooooooooooooooooooooooooooooooooooooo");
+                        if (ok == true)
                         {
-                            tempura.min2 = -18.3f;
-                            tempura.max2 = 22.5f;
-                        }
-                        if (nexxt.nex == 1)
-                        {
-                            tempura.min2 = -17.9f;
-                            tempura.max2 = 22.1f;
-                        }
-                        if (nexxt.nex == 2)
-                        {
-                            tempura.min2 = -17.8f;
-                            tempura.max2 = 21.8f;
-                        }
-                        if (nexxt.nex == 3)
-                        {
-                            tempura.min2 = -16.2f;
-                            tempura.max2 = 21f;
-                        }
-                        if (nexxt.nex == 4)
-                        {
-                            tempura.min2 = -15.3f;
-                            tempura.max2 = 19.3f;
-                        }
-                        // Debug.Log(fff);
-                        Cre(fff);
-                        audioSource = GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(pon);
-                    }
 
+                            fruok = true;
+                            Nexxt nexxt;
+                            nexxt = t2i.GetComponent<Nexxt>();
+                            int fff = nexxt.nex;
+                            if (nexxt.nex == 0)
+                            {
+                                tempura.min2 = -18.3f;
+                                tempura.max2 = 22.5f;
+                            }
+                            if (nexxt.nex == 1)
+                            {
+                                tempura.min2 = -17.9f;
+                                tempura.max2 = 22.1f;
+                            }
+                            if (nexxt.nex == 2)
+                            {
+                                tempura.min2 = -17.8f;
+                                tempura.max2 = 21.8f;
+                            }
+                            if (nexxt.nex == 3)
+                            {
+                                tempura.min2 = -16.2f;
+                                tempura.max2 = 21f;
+                            }
+                            if (nexxt.nex == 4)
+                            {
+                                tempura.min2 = -15.3f;
+                                tempura.max2 = 19.3f;
+                            }
+                            // Debug.Log(fff);
+                            Cre(fff);
+                            audioSource = GetComponent<AudioSource>();
+                            audioSource.PlayOneShot(pon);
+                        }
+
+                    }
                 }
             }
          
@@ -220,6 +225,15 @@ public class Spown : MonoBehaviour
 
 
         }
+    }
+
+    public void kmade()
+    {
+        knifes.gameObject.SetActive(true);
+        knifetime = true;
+        ok = true;
+        GetComponent<Spown>().enabled = false;
+        this.gameObject.SetActive(false);
     }
 
     

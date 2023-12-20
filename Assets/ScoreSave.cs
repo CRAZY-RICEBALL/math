@@ -40,6 +40,19 @@ public class ScoreSave : MonoBehaviour
                         Debug.Log("success");
                     }
                 });
+                NCMBObject name = new NCMBObject("WaterName");
+                name["score2"] = startname.namedd;
+                name.SaveAsync((NCMBException e) =>
+                {
+                    if (e != null)
+                    {
+                        Debug.Log("Error: " + e.ErrorMessage);
+                    }
+                    else
+                    {
+                        Debug.Log("success");
+                    }
+                });
             }
         }
     }
