@@ -6,7 +6,7 @@ public class Spown : MonoBehaviour
 {
     public GameObject[] kao;
     private Vector2 mousePos;
-    public bool ok;
+    public static bool ok;
     public bool fruok;
     public static bool gamew;
     public GameObject sui;
@@ -102,6 +102,7 @@ public class Spown : MonoBehaviour
     {
         if (ruret.ivent == false)
         {
+            GameObject moss = GameObject.Find("NEMPR");
             ok = false;
             sen.gameObject.SetActive(false);
             Nexxt nexxt;
@@ -114,7 +115,7 @@ public class Spown : MonoBehaviour
             //rb.bodyType = RigidbodyType2D.Kinematic;
             rb.bodyType = RigidbodyType2D.Dynamic;
             sui.transform.parent = null;
-
+            sui.transform.parent = moss.transform;
             GameObject cd = transform.GetChild(0).gameObject;
             Destroy(cd);
             //Invoke("no", 0f);
@@ -178,9 +179,11 @@ public class Spown : MonoBehaviour
     {
         if (Time.timeScale != 0)
         {
-            if (ruret.ivent == false)
+            if (knifetime == false)
             {
-               
+                if (ruret.ivent == false)
+                {
+
                     Debug.Log("oooooooooooooooooooooooooooooooooooooooooooo");
                     if (ok == true)
                     {
@@ -189,6 +192,7 @@ public class Spown : MonoBehaviour
                         Nexxt nexxt;
                         nexxt = t2i.GetComponent<Nexxt>();
                         int fff = nexxt.nex;
+                  
                         if (nexxt.nex == 0)
                         {
                             tempura.min2 = -18.3f;
@@ -214,13 +218,15 @@ public class Spown : MonoBehaviour
                             tempura.min2 = -15.3f;
                             tempura.max2 = 19.3f;
                         }
+
                         // Debug.Log(fff);
                         Cre(fff);
                         audioSource = GetComponent<AudioSource>();
                         audioSource.PlayOneShot(pon);
                     }
 
-               
+
+                }
             }
 
 
@@ -229,11 +235,24 @@ public class Spown : MonoBehaviour
 
     public void kmade()
     {
-        knifes.gameObject.SetActive(true);
-        knifetime = true;
-        ok = true;
-        GetComponent<Spown>().enabled = false;
-        this.gameObject.SetActive(false);
+        if (ok == true)
+        {
+
+            if (knifetime == false)
+            {
+                if (knifekaisuu.naif != 0)
+                {
+                    knifes.gameObject.SetActive(true);
+
+                    knifetime = true;
+                    ok = true;
+                    GetComponent<Spown>().enabled = false;
+                    knifes.GetComponent<knifeotoshi>().enabled = true;
+                    knifes.GetComponent<knifeotoshi>().Tugi();
+                    this.gameObject.SetActive(false);
+                }
+            }
+        }
     }
 
     

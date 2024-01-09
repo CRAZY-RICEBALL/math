@@ -166,10 +166,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fe: {fileID: 5448623233392402959, guid: 14a63af64c4580745812c581bd7ca1bf, type: 3}
+  me: {fileID: 1618241132699855017, guid: 426c9627597193747b2e6cd283e55f7b, type: 3}
+  supa: {fileID: 8482351681322185836, guid: f7c69b3b23cacd241ae11eaf7f7ae80d, type: 3}
   effct: {fileID: 8482351681322185836, guid: ff35ac2f45b1e694ba3dc8fa34d6a595, type: 3}
   maji: 0
   ookisa: 0
   kiran: {fileID: 8300000, guid: 527c0358ea7ca67499524971267d93ec, type: 3}
+  spa: {fileID: 3699750528404665065, guid: a2beaaf724b63664c9410504efcc5f59, type: 3}
 --- !u!82 &3973797550185609054
 AudioSource:
   m_ObjectHideFlags: 0
@@ -180,7 +183,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 527c0358ea7ca67499524971267d93ec, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

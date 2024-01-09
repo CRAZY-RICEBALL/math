@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class retry : MonoBehaviour
 {
+    public static bool men = false;
 
     // Start is called before the first frame update
     void Start()
@@ -16,12 +17,14 @@ public class retry : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Time.timeScale = 1.0f;
-            SceneManager.LoadScene("SampleScene");
+      //  if (Input.GetKeyDown(KeyCode.R))
+      //  {
+           // men = true;
+          //  Pausable.existsInstance = false;
+         //   Time.timeScale = 1.0f;
+        //    SceneManager.LoadScene("SampleScene");
            
 
-        }
+       // }
     }
 }

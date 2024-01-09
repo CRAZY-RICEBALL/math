@@ -53,27 +53,31 @@ public class tempura : MonoBehaviour
        
                 this.transform.position = new Vector2(Mathf.Clamp(tar.x, min2, max2) + off, taka);
             }
-          
+            if (Spown.knifetime == true)
+            {
+                min2 = -19.8f;
+                max2 = 21.8f;
+            }else
             if (nexxt.nex == 0)
             {
                 min2 = -18.3f;
                 max2 = 22.5f;
-            }
+            }else
             if (nexxt.nex == 1)
             {
                 min2 = -17.9f;
                 max2 = 22.1f;
-            }
+            }else
             if (nexxt.nex == 2)
             {
                 min2 = -17.8f;
                 max2 = 21.8f;
-            }
+            }else
             if (nexxt.nex == 3)
             {
                 min2 = -16.2f;
                 max2 = 21f;
-            }
+            }else
             if (nexxt.nex == 4)
             {
                 min2 = -15.3f;

@@ -5,10 +5,13 @@ using UnityEngine;
 public class gamewe : MonoBehaviour
 {
     public bool gameovern;
+    
     // Start is called before the first frame update
     void Start()
     {
+        GameObject mos = GameObject.Find("NEMPR");
         gameovern = true;
+        this.transform.parent = mos.transform;
     }
 
     // Update is called once per frame
