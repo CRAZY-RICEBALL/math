@@ -34,7 +34,9 @@ public class Pausable : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-           
+            retry.men = true;
+            existsInstance = false;
+            Time.timeScale = 1.0f;
             SceneManager.LoadScene("SampleScene");
 
 
@@ -72,6 +74,9 @@ public class Pausable : MonoBehaviour
 
     public void ret()
     {
+        retry.men = true;
+        existsInstance = false;
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("SampleScene");
     }
 

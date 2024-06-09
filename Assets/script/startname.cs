@@ -44,15 +44,15 @@ public class startname : MonoBehaviour
             SceneManager.LoadScene("SampleScene");
         }else if(modesen.modem == 1)
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("easy");
         }
         else if (modesen.modem == 2)
         {
-            SceneManager.LoadScene("SampleScene");
+           // SceneManager.LoadScene("SampleScene");
         }
         else if (modesen.modem == 3)
         {
-            SceneManager.LoadScene("SampleScene");
+           // SceneManager.LoadScene("SampleScene");
         }
 
 

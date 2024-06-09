@@ -36,7 +36,7 @@ public class modesen : MonoBehaviour
 
             gameObject.GetComponent<Image>().color = new Color32(255, 10, 0, 119);
             // text = text.GetComponent<Text>();
-            text.text = "ハードモード";
+            text.text = "開発中";
             modem = 2;
 
         }
@@ -45,7 +45,7 @@ public class modesen : MonoBehaviour
 
             gameObject.GetComponent<Image>().color = new Color32(255, 255, 0, 119);
             // text = text.GetComponent<Text>();
-            text.text = "クレイジーモード";
+            text.text = "開発中";
             modem = 3;
         }
         else if (modem == 3)
